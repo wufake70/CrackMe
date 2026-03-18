@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <!-- 这不是 Web 题，没有额外的彩蛋、线索哦 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>任务说明</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Microsoft YaHeii UI", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-sizing: content-box;
+        }
+
+        code, pre {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 1em;
+            background-color: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            border: 1px solid #e1e4e8;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .person {
+            border-bottom: 2px dashed #5b0095;
+            padding: 0 0.2em;
+        }
+
+        .important {
+            color: #d73a49;
+            font-weight: bold;
+        }
+
+        .product {
+            border-bottom: 2px dashed #cd0011;
+            padding: 0 0.2em;
+
+            &::before {
+                content: "《";
+            }
+
+            &::after {
+                content: "™》";
+            }
+        }
+
+        h2 small {
+            font-weight: normal;
+            color: #6a737d;
+            font-size: 11pt;
+            padding-left: .5em;
+        }
+
+        footer {
+            font-size: 8pt;
+            color: #6a737d;
+
+            p {
+                margin: 0;
+            }
+        }
+    </style>
+    <script>
+        addEventListener('DOMContentLoaded', () => {
+            // 更符合中文习惯，删除多余的空白字符。
+            const m = document.getElementById("main");
+            m.innerHTML = m.innerHTML.replace(/\s*\n\s*/g, '').replace(/\s+</g, '<').replace(/>\s+/g, '>');
+        });
+    </script>
+</head>
+<body>
+<main id="main">
+    <h2><a href="https://www.52pojie.cn/?176017" target="_blank">吾爱破解</a> 2026 春节解题领红包之七 HEX_ME <small>by 爱飞的猫</small></h2>
+    <p>
+        <span class="person">王大锤</span> 是产品 <span
+            class="product">HEX_ME</span> 的标志设计师。
+        产品已经开发完成，现在就缺他最终的设计图了。
+    </p>
+    <p>
+        好巧不巧，急着在大年三十回家过年的 <span class="person">王大锤</span>
+        忘了带上设计原件，只在网盘留了个加密储存的最终图。
+        负责管理密码的同事<span class="person">李伟</span>在年会喝酒过度，话都说不清。
+        </p>
+    <p>即便如此，你还是决定问他要密码。在<span class="person">李伟</span>的嘟囔声中，你只能听懂他说的前半截：“密码是 <code>flag{</code>…”。
+    </p>
+    <p>为了赶上项目死线，<span class="person">王大锤</span>找到了<span class="person">他的黑客朋友</span>（你），
+        希望你能帮它解决这个加密文件。</p>
+    <p><span class="person">王大锤</span>表示事成之后会提供 CB 作为感谢。</p>
+    <p>附件：</p>
+    <ul>
+        <li>加密图像：<a href="./flag.png.encrypted"><code>flag.png.encrypted</code></a> - 图像加密后的文件</li>
+        <li>解密工具：<a href="./CM1.exe"><code>CM1.exe</code></a> - 你的目标</li>
+    </ul>
+    <footer>
+        <hr>
+        <p>
+            本故事纯属虚构。文中及程序中出现的公司、人物、事件和情节均为艺术创作，与任何真实的公司、人物、事件或情节无关。如有雷同，纯属巧合。</p>
+        <p>提示：暴力枚举不可取。</p>
+    </footer>
+</main>
+</body>
+</html>
